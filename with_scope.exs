@@ -17,3 +17,9 @@ with [a | _] <- [1, 2, 3], do: IO.puts a
 with [a | _] <- nil, do: IO.puts a, IO.inspect a
 # with과 <-을 쓰면 매칭되지 않았던 값?을 리턴한다고 함. it returns nil
 
+values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mean = with count = Enum.count(values),
+            sum   = Enum.sum(values),
+       do: sum/count
+IO.puts mean
+
