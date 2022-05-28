@@ -30,7 +30,14 @@ defmodule MyList do
   def reduce([], value, _func), do: value
   def reduce([ head | tail ], value, func), do: reduce(tail, func.(head, value), func)
 
-  def mapsum([ head | tail ], func), do: mapsum(func.(head * head), func)
+  def mapsum([], _), do: 0
+  def mapsum([ head | tail ], func), do: func.(head) + mapsum(tail, func)
+
+  def max([]), do: nil
+  def max([ a ]), do: a
+  def max([ a, b ]) when a >= b, do: a
+  def max([ _, b ]), do: b
+  def max([ head | tail ]), do: max([ head, max(tail) ])
 end
 IO.puts MyList.len([])
 IO.puts MyList.len([11, 12, 13, 14, 15])
@@ -55,3 +62,5 @@ IO.inspect MyList.reduce([1, 2, 3, 4, 5], 1, &(&1 * &2))
 IO.inspect MyList.reduce([1, 2, 3, 4, 5], 0, &(&1 * &2))
 
 IO.inspect MyList.mapsum([1, 2, 3], &(&1 * &1))
+
+IO.inspect MyList.max([3,4,6,1,30,5,100,2,5])
