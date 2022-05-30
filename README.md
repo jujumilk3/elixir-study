@@ -1,4 +1,4 @@
-# local-test-elixir
+# elixir-study
 
 ## commands
 ### in project
