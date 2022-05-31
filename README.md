@@ -1,6 +1,10 @@
 # elixir-study
 
 ## commands
+### normal
+1. `mix new {project_name}`
+2. `mix format`
+
 ### in project
 1. `mix deps`: dependencies 확인
 2. `mix deps.get`: dependencies 다운로드
