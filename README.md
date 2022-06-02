@@ -16,3 +16,8 @@
 2. `Issues.GithubIssues.fetch("elixir-lang", "elixir")`
 3. `Issues.GithubIssues.process {"pragdave", "earmark", 1}`
 4. 5번 project에서 `mix docs`: docs 제작
+
+
+### spawn
+
+1. `elixir --erl "+P 1000000" -r spawn/chain.exs -e "Chain.run(1000000)"` 
