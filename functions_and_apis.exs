@@ -6,6 +6,8 @@ IO.inspect rem(5, 2) == 1
 IO.inspect div(5, 2) == 2
 # 제곱근
 IO.inspect :math.sqrt(9) == 3
+# 소수점 및 버리기
+IO.inspect trunc(4.123) == 4
 
 
 #### 문자열 관련 ####
@@ -32,6 +34,8 @@ IO.inspect String.to_integer("123") == 123
 IO.inspect Integer.to_string(123) == "123"
 # 특정 문자열 교체
 IO.inspect String.replace("abcabc", "a", "") == "bcbc"
+# 문자열 뒤집기
+IO.inspect String.reverse("123") == "321"
 
 
 
@@ -47,3 +51,7 @@ IO.inspect Integer.digits(123) == [1, 2, 3]
 IO.inspect Enum.reverse([1, 2, 3]) == [3, 2, 1]
 # 다차원 리스트를 1차원 리스트로
 IO.inspect List.flatten([[[1], 2], [[3]]]) == [1, 2, 3]
+# 특정 위치에 있는 요소 가져오기
+IO.inspect Enum.at([1, 2, 3], 2) == 3
+# 첫번째거 가져오기
+IO.inspect List.first([1, 2, 3]) == 1
