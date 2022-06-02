@@ -25,3 +25,13 @@ defmodule Chain do
     |> IO.inspect
   end
 end
+
+# % elixir -r chain.exs -e "Chain.run(10)"
+# {1985, "Result is 10"}
+# % elixir -r chain.exs -e "Chain.run(10000)"
+# {37992, "Result is 10000"}
+# % elixir -r chain.exs -e "Chain.run(100000)"
+# {365545, "Result is 100000"}
+# % elixir --erl "+P 1000000" -r chain.exs -e "Chain.run(1_000_000)"
+# {3780307, "Result is 1000000"}
+# %

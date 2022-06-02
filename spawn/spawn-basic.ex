@@ -4,6 +4,8 @@ defmodule SpawnBasic do
   end
 end
 
+SpawnBasic.greet
+
 """
 iex(1)> c("spawn-basic.ex")
 [SpawnBasic]
@@ -13,5 +15,5 @@ Hello
 iex(3)> spawn(SpawnBasic, :greet, [])
 Hello
 #PID<0.115.0>
-iex(4)> 
+iex(4)>
 """
