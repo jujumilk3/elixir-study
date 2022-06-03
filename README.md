@@ -3,7 +3,8 @@
 ## commands
 ### normal
 1. `mix new {project_name}`
-2. `mix format`
+2. `mix --sup new {project_name}`
+3. `mix format`
 
 ### in project
 1. `mix deps`: dependencies 확인
@@ -32,3 +33,7 @@
    5. `Node.list`
    6. If connected, Node two knows Node one.
    7. ![node-connection](docs/imgs/nodeconnection.png)
+
+### duper project
+1. `mix run --no-halt`
+2. `time mix run --no-halt > dups.out`
