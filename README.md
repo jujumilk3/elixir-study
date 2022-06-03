@@ -17,7 +17,18 @@
 3. `Issues.GithubIssues.process {"pragdave", "earmark", 1}`
 4. 5번 project에서 `mix docs`: docs 제작
 
-
 ### spawn
-
 1. `elixir --erl "+P 1000000" -r spawn/chain.exs -e "Chain.run(1000000)"` 
+
+### node
+1. `iex --name jujumilk3@gyudoza.local`
+2. `iex --sname gyudoza`
+3. `iex> Node.self`
+4. node connection
+   1. `iex --sname node_one`
+   2. `iex --sname node_two`
+   3. `Node.list`
+   4. `Node.connect :"node_one@{node_one_address}"`
+   5. `Node.list`
+   6. If connected, Node two knows Node one.
+   7. ![node-connection](docs/imgs/nodeconnection.png)
