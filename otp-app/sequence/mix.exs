@@ -1,0 +1,36 @@
+defmodule Sequence.MixProject do
+  use Mix.Project
+
+  def project do
+    [
+      app: :sequence,
+      version: "0.1.0",
+      elixir: "~> 1.13",
+      start_permanent: Mix.env() == :prod,
+      deps: deps()
+    ]
+  end
+
+  # Run "mix help compile.app" to learn about applications.
+  def application do
+    [
+      mod: {
+        Sequence.Application, []
+        # Sequence.Application, 456
+      }, # 애플리케이션의 메인 시작 지점이 될 모듈을 OTP에 알린다.
+      registered: [
+        Sequence.Server,
+      ], # 애플리케이션에 등록할 프로세스 이름의 목록이 들어감. 프로세스 이름 -> PID대신 사용하는 이름.
+      extra_applications: [:logger],
+      env: [initial_number: 456]
+    ]
+  end
+
+  # Run "mix help deps" to learn about dependencies.
+  defp deps do
+    [
+      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+    ]
+  end
+end
