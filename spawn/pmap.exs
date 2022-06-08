@@ -10,3 +10,6 @@ defmodule Parallel do
        end)
   end
 end
+# ^pid로 강제하지 않으면 순서가 무작위로 섞임.
+
+IO.inspect Parallel.pmap(1..10, &(&1 * &1))

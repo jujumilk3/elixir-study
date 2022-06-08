@@ -19,3 +19,4 @@ defmodule Link1 do
 end
 
 Link1.run
+# 생성된 프로세스가 종료돼도 아무것도 받지 못함.

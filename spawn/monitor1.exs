@@ -20,3 +20,5 @@ defmodule Monitor1 do
 end
 
 Monitor1.run
+# spawn_link: 한 프로세스가 실패했을 때 다른 프로세스도 종료돼야 한다면
+# spawn_monitor: 프로세스가 종료될 때 알림을 받으려면

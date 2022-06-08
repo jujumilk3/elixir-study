@@ -19,3 +19,6 @@ defmodule Link2 do
 end
 
 Link2.run
+# spawn_link 명령어를 통해 link를 하면 프로세스가 비정상종료될 때 런타임이 이를 알려줌.
+# 하나가 비정상종료되면 링크돼있는 것도 종료됨.
+

@@ -20,3 +20,5 @@ defmodule Link3 do
 end
 
 Link3.run
+# :trap_exit이라는 건 생성된 프로세스가 종료될 때 발생하는 flag(:EXIT)를 잡아서
+# 그대로 진행하겠다는 의미.

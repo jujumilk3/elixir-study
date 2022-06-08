@@ -4,6 +4,7 @@ defmodule Spawn2 do
       {sender, msg} ->
         send sender, { :ok, "Hello, #{msg}" }
         greet()
+        # receive는 대기하는 것이므로 다시 이렇게 호출해줘서 대기를 시켜줘야만 
     end
   end
 end
