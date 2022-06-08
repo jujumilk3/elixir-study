@@ -3,7 +3,7 @@
 ## commands
 ### normal
 1. `mix new {project_name}`
-2. `mix --sup new {project_name}`
+2. `mix --sup new {project_name}` : supervisor project
 3. `mix format`
 
 ### in project
