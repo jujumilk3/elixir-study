@@ -37,3 +37,8 @@
 ### duper project
 1. `mix run --no-halt`
 2. `time mix run --no-halt > dups.out`
+
+
+## references
+1. [가드 조건절에서 사용할 수 있는 것들](https://hexdocs.pm/elixir/1.13.4/Kernel.html#guards)
+2. 
