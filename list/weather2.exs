@@ -13,16 +13,12 @@ defmodule WeatherHistory do
     [1366236422, 26, 17, 0.025]
     ]
   end
-  def for_location_27([], target_loc), do: []
-  def for_location_27([ [ _, target_loc, _, _ ] | tail ]) do
-    [ head | for_location_27(tail, target_loc) ]
+  def for_location([], _target_loc), do: []
+  def for_location([ head = [ _, target_loc, _, _ ] | tail ], target_loc) do
+    [ head | for_location(tail, target_loc) ]
   end
-  def for_location_27([ _ | tail ], target_loc), do: for_location_27(tail, target_loc)
+  def for_location([ _ | tail ], target_loc), do: for_location(tail, target_loc)
 end
 
 
-IO.inspect WeatherHistory.for_location_27(WeatherHistory.test_data)
-
-
-IO.inspect div(5, 2)
-IO.inspect 
+IO.inspect WeatherHistory.for_location(WeatherHistory.test_data, 26)
