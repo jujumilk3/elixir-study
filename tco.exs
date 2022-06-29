@@ -12,3 +12,19 @@ end
 number = 100
 IO.puts Recursive.factorial(number)
 IO.puts TailRecursive.factorial(number)
+
+
+
+defmodule A do
+  def a() do
+    B.b()
+  end
+end
+
+defmodule B do
+  def b() do
+    A.a()
+  end
+end
+
+A.a()
